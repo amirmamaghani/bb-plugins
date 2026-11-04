@@ -4,7 +4,7 @@ Plugins for [BB](https://getbb.app), plus a small marketplace that lists them.
 
 | Plugin | What it does |
 |---|---|
-| [Reading](plugins/reading) | Themes, light/dark mode, column width, font, text size and line height in one panel. |
+| [Readable](plugins/readable) | Themes, light/dark mode, column width, font, text size and line height in one panel. |
 
 ## Install
 
@@ -12,13 +12,13 @@ Add the marketplace once, then install from BB's plugin store:
 
 ```sh
 bb marketplace add git:github.com/amirmamaghani/bb-plugins@main
-bb plugin install reading@amirmamaghani-plugins
+bb plugin install readable@amirmamaghani-plugins
 ```
 
 Or install one plugin straight from the repository:
 
 ```sh
-bb plugin install git:https://github.com/amirmamaghani/bb-plugins.git@main --plugin reading
+bb plugin install git:https://github.com/amirmamaghani/bb-plugins.git@main --plugin readable
 ```
 
 Plugins run with full trust inside the BB server. Read the source before installing.
@@ -31,12 +31,12 @@ Plugins run with full trust inside the BB server. Read the source before install
 
 ## Releasing a plugin
 
-Releases are git tags with the plugin as prefix, for example `reading/v0.1.0`. The catalog entry tracks `^0.1.0` with `tagPrefix: "reading/"`, so a new compatible tag reaches users without a catalog change. Tags are immutable: publish a fix as a new version.
+Releases are git tags with the plugin as prefix, for example `readable/v0.1.0`. The catalog entry tracks `^0.1.0` with `tagPrefix: "readable/"`, so a new compatible tag reaches users without a catalog change. Tags are immutable: publish a fix as a new version.
 
 ```sh
 bb plugin build            # inside plugins/<id>
-git tag -a reading/v0.1.0 -m "Release reading v0.1.0"
-git push origin reading/v0.1.0
+git tag -a readable/v0.1.0 -m "Release readable v0.1.0"
+git push origin readable/v0.1.0
 ```
 
 ## Submitting to the BB Community marketplace

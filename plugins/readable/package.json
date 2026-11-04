@@ -1,5 +1,5 @@
 {
-  "name": "bb-plugin-reading",
+  "name": "bb-plugin-readable",
   "version": "0.1.0",
   "description": "Tunes how threads read: pick a theme and light/dark mode, set column width, font, text size and line height in one panel.",
   "license": "MIT",
@@ -7,9 +7,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amirmamaghani/bb-plugins.git",
-    "directory": "plugins/reading"
+    "directory": "plugins/readable"
   },
-  "homepage": "https://github.com/amirmamaghani/bb-plugins/tree/main/plugins/reading",
+  "homepage": "https://github.com/amirmamaghani/bb-plugins/tree/main/plugins/readable",
   "keywords": [
     "bb-plugin",
     "themes",
@@ -23,7 +23,7 @@
     "bbPluginSdk": ">=0.6.94"
   },
   "bb": {
-    "name": "Reading",
+    "name": "Readable",
     "description": "Tunes how threads read: pick a theme and light/dark mode, set column width, font, text size and line height in one panel.",
     "branding": {
       "icon": "Type"

@@ -1,4 +1,4 @@
-// Reading panel: column width, font, text scale and line height for threads.
+// Readable panel: column width, font, text scale and line height for threads.
 // shortcut: relies on internal BB selectors (same as Chat Width); re-check after BB updates.
 import * as React from "react";
 import { definePluginApp, useSdk } from "@get-bb/plugin-sdk/app";
@@ -14,7 +14,7 @@ const THEMES: Record<string, { name: string } & Look> = {
   large: { name: "Large print", font: "system-ui", scale: 135, lh: 1.7 },
   compact: { name: "Compact", font: "system-ui", scale: 92, lh: 1.4 },
 };
-const KEY = "bb-reading";
+const KEY = "bb-readable";
 const FONTS = ["system-ui", "Georgia", "Charter", "Iowan Old Style", "Inter", "Menlo"];
 
 function load(): State {
@@ -41,10 +41,10 @@ function css(s: State) {
 }
 
 function apply() {
-  let el = document.getElementById("bb-reading-style");
+  let el = document.getElementById("bb-readable-style");
   if (!el) {
     el = document.createElement("style");
-    el.id = "bb-reading-style";
+    el.id = "bb-readable-style";
     document.head.append(el);
   }
   el.textContent = css(state);
@@ -95,7 +95,7 @@ function writeMode(mode: Mode) {
 }
 
 // Hover preview: resolve a theme's CSS and layer it over the active one until the pointer leaves.
-const PREVIEW_ID = "bb-reading-theme-preview";
+const PREVIEW_ID = "bb-readable-theme-preview";
 const clearPreview = () => document.getElementById(PREVIEW_ID)?.remove();
 function showPreview(css: string) {
   clearPreview();
@@ -108,7 +108,7 @@ function showPreview(css: string) {
 // shortcut: built-ins are hardcoded (the typed catalog lists only custom and plugin themes); update if BB adds more.
 const BUILT_IN: [string, string][] = [["default", "Default"], ["nord", "Nord"], ["dracula", "Dracula"], ["solarized", "Solarized"], ["gruvbox", "Gruvbox"], ["catppuccin", "Catppuccin"]];
 
-function ReadingPanel() {
+function ReadablePanel() {
   const s = React.useSyncExternalStore(subscribe, () => state);
   const { theme } = useSdk();
   const [palette, setPalette] = React.useState("");
@@ -166,12 +166,12 @@ function ReadingPanel() {
 
 export default definePluginApp((app) => {
   app.contentScripts.register({
-    id: "reading-style",
+    id: "readable-style",
     mount() {
       apply();
-      return () => document.getElementById("bb-reading-style")?.remove();
+      return () => document.getElementById("bb-readable-style")?.remove();
     },
   });
   // Fixed: always present in the thread side panel, no launcher needed.
-  app.slots.experimental_tab({ context: { kind: "thread" }, availability: "fixed", id: "reading", title: "Reading", icon: "Type", component: ReadingPanel });
+  app.slots.experimental_tab({ context: { kind: "thread" }, availability: "fixed", id: "readable", title: "Readable", icon: "Type", component: ReadablePanel });
 });

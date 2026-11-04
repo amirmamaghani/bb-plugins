@@ -4,8 +4,8 @@
   "name": "amirmamaghani-bb-plugins",
   "plugins": [
     {
-      "name": "reading",
-      "source": "./plugins/reading"
+      "name": "readable",
+      "source": "./plugins/readable"
     }
   ]
 }

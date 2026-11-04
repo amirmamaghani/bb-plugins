@@ -6,8 +6,8 @@
   "description": "BB plugins maintained by amirmamaghani.",
   "plugins": [
     {
-      "id": "reading",
-      "displayName": "Reading",
+      "id": "readable",
+      "displayName": "Readable",
       "description": "Tunes how threads read: pick a theme and light/dark mode, set column width, font, text size and line height in one panel.",
       "icon": "Type",
       "tags": [
@@ -24,9 +24,9 @@
       "source": {
         "git": {
           "url": "https://github.com/amirmamaghani/bb-plugins.git",
-          "subdir": "plugins/reading",
+          "subdir": "plugins/readable",
           "range": "^0.1.0",
-          "tagPrefix": "reading/"
+          "tagPrefix": "readable/"
         }
       }
     }

@@ -1,4 +1,4 @@
-# Reading
+# Readable
 
 A BB plugin that tunes how threads read.
 
