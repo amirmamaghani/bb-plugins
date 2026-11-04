@@ -1,0 +1,74 @@
+{
+  "name": "bb-plugin-reading",
+  "version": "0.1.0",
+  "description": "Tunes how threads read: pick a theme and light/dark mode, set column width, font, text size and line height in one panel.",
+  "license": "MIT",
+  "author": "amirmamaghani",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirmamaghani/bb-plugins.git",
+    "directory": "plugins/reading"
+  },
+  "homepage": "https://github.com/amirmamaghani/bb-plugins/tree/main/plugins/reading",
+  "keywords": [
+    "bb-plugin",
+    "themes",
+    "readability",
+    "typography",
+    "layout"
+  ],
+  "type": "module",
+  "engines": {
+    "bb": ">=0.48",
+    "bbPluginSdk": ">=0.6.94"
+  },
+  "bb": {
+    "name": "Reading",
+    "description": "Tunes how threads read: pick a theme and light/dark mode, set column width, font, text size and line height in one panel.",
+    "branding": {
+      "icon": "Type"
+    },
+    "server": "./server.ts",
+    "app": "./app.tsx",
+    "themes": [
+      {
+        "id": "paper",
+        "name": "Paper",
+        "description": "Warm off-white by day, warm charcoal after dark.",
+        "css": "./themes/paper.css"
+      },
+      {
+        "id": "slate",
+        "name": "Soft Slate",
+        "description": "Low-glare cool grey, easy on the eyes.",
+        "css": "./themes/slate.css"
+      },
+      {
+        "id": "sepia",
+        "name": "Sepia",
+        "description": "Aged-paper tones for long reading.",
+        "css": "./themes/sepia.css"
+      }
+    ]
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "bb plugin build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.6.94",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "better-sqlite3": "^12.0.0",
+    "cron-parser": "^5.5.0",
+    "hono": "^4.11.9",
+    "typescript": "^5.7.0",
+    "@pierre/diffs": "^1.2.9",
+    "@radix-ui/react-popover": "^1.1.19",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.4.0"
+  }
+}

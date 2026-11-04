@@ -1,0 +1,98 @@
+/* Sepia: native BB tokens only. */
+
+:root,
+.light {
+  --canvas: #f1e4cc;
+  --ink: #433422;
+  --sidebar: #e6d6b8;
+  --card: #f7ecd9;
+  --popover: #f7ecd9;
+  --secondary: #e2d2b3;
+  --accent: #e2d2b3;
+  --muted: #e2d2b3;
+  --border: #d3c09b;
+  --primary: #9a5a1f;
+  --primary-foreground: #ffffff;
+  --muted-foreground: #6e5a40;
+  --subtle-foreground: #6e5a40;
+  --readback-foreground: #6e5a40;
+  --sidebar-accent: #e2d2b3;
+  --surface-selected: #e2d2b3;
+  --surface-raised: #f7ecd9;
+  --surface-recessed: #e6d6b8;
+  --input: #a8926c;
+  --destructive: #a64155;
+  --destructive-foreground: #ffffff;
+  --destructive-text: #a64155;
+  --warning: #865b18;
+  --warning-text: #865b18;
+  --attention: #865b18;
+  --success: #337047;
+  --diff-added: #337047;
+  --diff-removed: #a64155;
+  --file-accent: #9a5a1f;
+  --background: var(--canvas);
+  --foreground: var(--ink);
+  --card-foreground: var(--ink);
+  --popover-foreground: var(--ink);
+  --secondary-foreground: var(--ink);
+  --accent-foreground: var(--ink);
+  --sidebar-foreground: var(--ink);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-border: var(--border);
+  --border-hairline: var(--border);
+  --border-seam: var(--border);
+  --ring: var(--primary);
+  --sidebar-ring: var(--primary);
+  --surface-selected-border: color-mix(in srgb, var(--primary) 40%, var(--canvas));
+}
+
+.dark {
+  --canvas: #231c14;
+  --ink: #d9c9ad;
+  --sidebar: #1a150f;
+  --card: #2c241b;
+  --popover: #2c241b;
+  --secondary: #3a3024;
+  --accent: #3a3024;
+  --muted: #3a3024;
+  --border: #40352a;
+  --primary: #e3b070;
+  --primary-foreground: #1c1710;
+  --muted-foreground: #aa9a80;
+  --subtle-foreground: #aa9a80;
+  --readback-foreground: #aa9a80;
+  --sidebar-accent: #3a3024;
+  --surface-selected: #3a3024;
+  --surface-raised: #2c241b;
+  --surface-recessed: #1a150f;
+  --input: #6a5a44;
+  --destructive: #eca0a8;
+  --destructive-foreground: #1c1710;
+  --destructive-text: #eca0a8;
+  --warning: #e9c085;
+  --warning-text: #e9c085;
+  --attention: #e9c085;
+  --success: #8ccb91;
+  --diff-added: #8ccb91;
+  --diff-removed: #eca0a8;
+  --file-accent: #e3b070;
+  --background: var(--canvas);
+  --foreground: var(--ink);
+  --card-foreground: var(--ink);
+  --popover-foreground: var(--ink);
+  --secondary-foreground: var(--ink);
+  --accent-foreground: var(--ink);
+  --sidebar-foreground: var(--ink);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-border: var(--border);
+  --border-hairline: var(--border);
+  --border-seam: var(--border);
+  --ring: var(--primary);
+  --sidebar-ring: var(--primary);
+  --surface-selected-border: color-mix(in srgb, var(--primary) 40%, var(--canvas));
+}
