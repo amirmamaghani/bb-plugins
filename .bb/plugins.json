@@ -1,7 +1,7 @@
 {
   "$schema": "https://getbb.app/schemas/plugins.schema.json",
   "schemaVersion": 1,
-  "name": "amirmamaghani-bb-plugins",
+  "name": "amirmamaghani-plugins",
   "plugins": [
     {
       "name": "readable",
